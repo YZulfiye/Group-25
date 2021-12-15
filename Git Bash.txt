@@ -1,0 +1,62 @@
+1) Посмотреть где я 
+	pwd
+2) Создать папку
+	mkdir Zulya_QA
+3) Зайти в папку
+	cd Zulya_QA
+4) Создать 3 папки
+	mkdir happy1  happy2  happy3
+5) Зайти в любую папку
+6) Создать 5 файлов (3 txt, 2 json)
+	touch QA_1.txt  QA_2.txt  QA_3.txt
+	> QA_1.json  > QA_2.json
+7) Создать 3 папки
+	mkdir fly_1  fly_2  fly_3
+8) Вывести список содержимого папки
+	ls -la
+9) + Открыть любой txt файл
+	vim QA_1.txt					vim QA_3.txt
+10) + Написать туда что-нибудь, любой текст 
+	"Because I'm happy!"				"Ты знаешь тонкости «Safari» и «Mozilla»
+							и интеллектом обладаешь круче Билла,
+							тестируешь ответственно и славно,
+							тебе в работе не найдётся даже равных!
+							Ваша работа очень ответственная,
+							Но зато и улыбка у всех приветственная.
+							От вашего мнения и работы зависят почти все,
+							Так что не подведите всех, кто в космосе и на Земле."
+11) + Сохранить и выйти: 
+	Нажать Esc и :wq
+12) Выйти из папки на уровень выше
+	cd ../
+13) Переместить любые 2 файла, которые вы создали, в любую другую папку
+	mv QA_1.txt QA_2.txt /c/Zulya_QA/happy2
+14) Скопировать любые 2 файла, которые вы создали, в любую другую папку
+	cp QA_1.txt QA_2.txt /c/Zulya_QA/happy3
+15) Найти файл по имени
+	find ./ -type f -name "QA_3.txt" 
+Ответ: ./happy1/QA_3.txt
+16) Просмотреть содержимое в реальном времени (Команда grep)
+	tail -f QA_3.txt
+17) Вывести несколько первых строк из текстового файла
+cat QA_3.txt | sed -n 1,2p		или head -n2 QA_3.txt
+"Ты знаешь тонкости «Safari» и «Mozilla»
+и интеллектом обладаешь круче Билла,
+18) Вывести несколько последних строк из текстового файла
+cat QA_3.txt | sed -n 7,8p		или tail -n5 QA_3.txt
+От вашего мнения и работы зависят почти все,
+Так что не подведите всех, кто в космосе и на Земле."
+19) Просмотреть содержимое длинного файла (команда less). Изучите как она работает
+	less +1 QA_1.txt
+20) Вывести дату и время
+	date
+Задание *
+1) Отправить http  запрос на сервер. http://162.55.220.72:5005/object_info_3?name=Vadim&age=32&salary=1000
+	$ curl "http://162.55.220.72:5005/object_info_3?name=Vadim&age=32&salary=1000"
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   185  100   185    0     0   1559      0 --:--:-- --:--:-- --:--:--  1666{"age":"32","family":{"children":[["Alex",24],["Kate",12]],"pets":{"cat":{"age":3,"name":"Sunny"},"dog":{"age":4,"name":"Luky"}},"u_salary_1_5_year":4000},"name":"Vadim","salary":1000}
+
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+	#!/bin/bash cd Zulya_QA mkdir happy1 mkdir happy2 mkdir happy3 cd happy1 touch QA_1.txt touch QA_2.txt touch QA_3.txt >QA_1.json >QA_2.json mkdir fly_1 mkdir fly_2 mkdir fly_3 ls -la/
+
