@@ -1,3 +1,7 @@
+Group-25
+HW Linux terminal (GitBash) commands
+Yahiaieva Zulfiie
+
 1) Посмотреть где я 
 	pwd
 2) Создать папку
